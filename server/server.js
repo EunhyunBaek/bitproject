@@ -28,7 +28,11 @@ const EXTERNAL_API_URL = 'https://54capvm12g.execute-api.ap-northeast-2.amazonaw
 // [보안 설정] Helmet 및 CORS, Request Body 크기 제한 적용
 // -----------------------------------------------------------------------------
 app.use(helmet()); // 주요 HTTP 보안 헤더 자동 설정
-app.use(cors({ origin: 'http://localhost:5173', credentials: true })); // 지정된 프론트엔드 URL만 접근 허용
+app.use(cors({ origin: [
+  'http://localhost:5173',
+  'bitproject-j3120wu9s-bitproject1.vercel.app'
+], 
+  credentials: true })); // 지정된 프론트엔드 URL만 접근 허용
 app.use(express.json({ limit: '10kb' })); // 악의적인 거대 JSON 페이로드 공격(DoS) 방지
 
 // 로그인 API 전용 Rate Limiting (15분당 최대 10회 시도 허용)
