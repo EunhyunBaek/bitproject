@@ -30,7 +30,7 @@ const EXTERNAL_API_URL = 'https://54capvm12g.execute-api.ap-northeast-2.amazonaw
 app.use(helmet()); // 주요 HTTP 보안 헤더 자동 설정
 app.use(cors({ origin: [
   'http://localhost:5173',
-  'bitproject-lac.vercel.app'
+  'https://bitproject-lac.vercel.app'
 ], 
   credentials: true })); // 지정된 프론트엔드 URL만 접근 허용
 app.use(express.json({ limit: '10kb' })); // 악의적인 거대 JSON 페이로드 공격(DoS) 방지
