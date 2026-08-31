@@ -1,0 +1,20 @@
+# server/schema.yaml
+tables:
+  - name: users
+    columns:
+      - name: id
+        type: "INTEGER PRIMARY KEY AUTOINCREMENT"
+      - name: username
+        type: "TEXT UNIQUE"
+      - name: password
+        type: "TEXT"
+      - name: name
+        type: "TEXT"
+      - name: employeeId
+        type: "TEXT UNIQUE"
+      - name: role
+        type: "TEXT CHECK(role IN ('ADMIN', 'EMPLOYEE'))"
+      - name: is_retired
+        type: "INTEGER DEFAULT 0"
+      - name: birthDate
+        type: "TEXT"
