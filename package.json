@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node server/server.js"
+    "start": "node server/server.js",
     "postinstall": "npm rebuild sqlite3 --build-from-source"
   },
   "dependencies": {
