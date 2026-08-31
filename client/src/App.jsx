@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 
 // 백엔드 API 호스트 기본 URL
-const API_BASE = 'https://bitproject-srz0.onrender.com';
+const API_BASE = 'https://bitproject-srz0.onrender.com/api';
 
 export default function App() {
   // ---------------------------------------------------------------------------
